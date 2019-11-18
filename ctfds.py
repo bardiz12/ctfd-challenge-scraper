@@ -74,10 +74,10 @@ class CTFDScrapper():
 
             exported[chall['category']][chall['name']] = chall_info
 
-            print "Writing challs.json"
-            challs = open(directory_name + "/" + "challs.json",'w')
-            json.dump(exported, challs,indent=4, sort_keys=True)
-            challs.close()
+        print "Writing challs.json"
+        challs = open(directory_name + "/" + "challs.json",'w')
+        json.dump(exported, challs,indent=4, sort_keys=True)
+        challs.close()
                     
 if(len(sys.argv) < 3):
     print "Usage : python ctfds.py [CTFD-URL] [output_dir]"
